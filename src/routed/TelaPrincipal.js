@@ -134,7 +134,7 @@ export default function TelaPrincipal() {
             </div>
 
             <span className='span-taxas'>
-              Não lembro <a href='https://xxpay.muxipay.net/#/merchant_fee' target="_blank" aria-label='portal'>minhas taxas!</a>
+              Não lembro <a href='https://xxpay.muxipay.net/#/merchant_fee' target="_blank" aria-label='portal' rel="noreferrer">minhas taxas!</a>
             </span>
 
           </form>
