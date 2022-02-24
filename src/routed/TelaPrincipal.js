@@ -13,7 +13,8 @@ export default function TelaPrincipal() {
     var valorLiquido
     var valorTaxaFinal
     var valorRepasse
-    var valorParcela
+    var valorParcelaLiq
+    var valorParcelaRep
     var valorTaxa = document.getElementById('taxa').value
     var selectParcela = document.getElementById('parcelas')
     var valueParcela = selectParcela.options[selectParcela.selectedIndex].value
@@ -25,46 +26,60 @@ export default function TelaPrincipal() {
 
     // FUNCAO CADA PARCELA
     if (valueParcela === 'debito' || valueParcela === 'credito') {
-      valorParcela = valorRepasse
+      valorParcelaRep = valorRepasse
+      valorParcelaLiq = valorLiquido
       numParcela = 'Débito / Crédito'
     } else if (valueParcela === '2x') {
-      valorParcela = valorRepasse / 2
+      valorParcelaRep = valorRepasse / 2
+      valorParcelaLiq = valorLiquido / 2
       numParcela = '2'
     } else if (valueParcela === '3x') {
-      valorParcela = valorRepasse / 3
+      valorParcelaRep = valorRepasse / 3
+      valorParcelaLiq = valorLiquido / 3
       numParcela = '3'
     } else if (valueParcela === '4x') {
-      valorParcela = valorRepasse / 4
+      valorParcelaRep = valorRepasse / 4
+      valorParcelaLiq = valorLiquido / 4
       numParcela = '4'
     } else if (valueParcela === '5x') {
-      valorParcela = valorRepasse / 5
+      valorParcelaRep = valorRepasse / 5
+      valorParcelaLiq = valorLiquido / 5
       numParcela = '5'
     } else if (valueParcela === '6x') {
-      valorParcela = valorRepasse / 6
+      valorParcelaRep = valorRepasse / 6
+      valorParcelaLiq = valorLiquido / 6
       numParcela = '6'
     } else if (valueParcela === '7x') {
-      valorParcela = valorRepasse / 7
+      valorParcelaRep = valorRepasse / 7
+      valorParcelaLiq = valorLiquido / 7
       numParcela = '7'
     } else if (valueParcela === '8x') {
-      valorParcela = valorRepasse / 8
+      valorParcelaRep = valorRepasse / 8
+      valorParcelaLiq = valorLiquido / 8
       numParcela = '8'
     } else if (valueParcela === '9x') {
-      valorParcela = valorRepasse / 9
+      valorParcelaRep = valorRepasse / 9
+      valorParcelaLiq = valorLiquido / 9
       numParcela = '9'
     } else if (valueParcela === '10x') {
-      valorParcela = valorRepasse / 10
+      valorParcelaRep = valorRepasse / 10
+      valorParcelaLiq = valorLiquido / 10
       numParcela = '10'
     } else if (valueParcela === '11x') {
-      valorParcela = valorRepasse / 11
+      valorParcelaRep = valorRepasse / 11
+      valorParcelaLiq = valorLiquido / 11
       numParcela = '11'
     } else {
-      valorParcela = valorRepasse / 12
+      valorParcelaRep = valorRepasse / 12
+      valorParcelaLiq = valorLiquido / 12
       numParcela = '12'
     }
 
+    
+
     // MOSTRA DADOS
     alert("Valor líquido: R$ " + valorLiquido.toFixed(2) + "\nValor a repassar: R$ " + valorRepasse.toFixed(2) + "\nTaxa: " + valorTaxa + "%" + 
-    "\nValor de cada parcela: R$ " + valorParcela.toFixed(2) + "\nNúmero de parcelas: " + numParcela)
+    "\nValor de cada parcela (líquido): R$ " + valorParcelaLiq.toFixed(2) + "\nValor de cada parcela (repasse): R$ " + valorParcelaRep.toFixed(2) + "\nNúmero de parcelas: " + numParcela)
   }
 
   return (
